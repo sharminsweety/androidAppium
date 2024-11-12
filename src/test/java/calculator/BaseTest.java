@@ -55,7 +55,7 @@ public class BaseTest {
         //eta sel ar appium e same method we can use it in web too
         try {
             File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE); //driver passe na as eta static method e ace ekhne driver ekta method
-            String currentDir = System.getProperty("user.dir") + "/build/screenshots/";//bild auto screenshots directory banabe
+            String currentDir = System.getProperty("user.dir") + "/build/screenshots/";//build auto screenshots directory banabe
             FileUtils.copyFile(scrFile, new File(currentDir + System.currentTimeMillis() + ".png"));
         } catch (IOException e) {
             throw new RuntimeException(e);
